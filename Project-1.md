@@ -13,4 +13,21 @@ var schema = Joi.object().keys({
 
 Joi.validate({ username: 'abc', birthyear: 1994 }, schema, function (err, value) { });  // err === null -> valid
 ```
+The constraints placed on each property is defined as follows:   
+`username: Joi.string().alphanum().min(5).max(25).required()`
+* Is required
+* Must be a string
+* Must contain only alphanumeric characters
+* Must have a minimum of 5 characters and a maximum of 25 characters
 
+`password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required()`
+* Is required
+* Must be a string
+* Must satisfy the custom regex
+
+`birthyear: Joi.number().integer().min(1900).max(2010)`
+* Must be a integer
+* Value must be between 1900 and 2010
+
+`email: Joi.string().email()`
+* Must be a valid email address
