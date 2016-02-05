@@ -38,6 +38,4 @@ Objects can then be evaluated using the following:
 * `schema`: the schema the object is evaluated against
 * `function (err, value) {}`: returns the value if it passes or returns an error
 
-Example:
-`Joi.validate({ username: 'abc', birthyear: 1994 }, schema, function (err, value) { });  // err === null -> valid`
 
