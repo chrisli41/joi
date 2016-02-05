@@ -31,3 +31,13 @@ The constraints placed on each property is defined as follows:
 
 `email: Joi.string().email()`
 * Must be a valid email address
+
+Objects can then be evaluated using the following:
+`Joi.validate( object, schema, function (err, value) {})`
+* `object`: the object to be evaluated
+* `schema`: the schema the object is evaluated against
+* `function (err, value) {}`: returns the value if it passes or returns an error
+
+Example:
+`Joi.validate({ username: 'abc', birthyear: 1994 }, schema, function (err, value) { });  // err === null -> valid`
+
