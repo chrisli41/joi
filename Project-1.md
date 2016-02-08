@@ -1,8 +1,8 @@
 ###What to Use Joi for and When to Use It  
 
-Joi is an object schema description language and validator for JavaScript objects. If you're wondering why you need to validate JavaScript Objects, this section will give you a brief introduction on why data validation is essential. 
+Joi is an object schema description language and validator for JavaScript objects. If you're wondering why you need to validate JavaScript Objects, this section will give you a brief introduction on why data validation is essential.
 
-Let’s say for example you have a web form that asks users to input their username, password, date of birth, and email. How would you prevent users from inputting gibberish into your form? You wouldn’t want to deal with submissions that have meaningless and invalid data. This is where data validation comes into play. 
+Let’s say for example you have a web form that asks users to input their username, password, date of birth, and email. How would you prevent users from inputting gibberish into your form? You wouldn’t want to deal with submissions that have meaningless or invalid data. For example, a user inputs the value @sdf as their username. You wouldn't want to deal with spaces or symbols in their username. Joi allows you to invalidate this username. You can then ask the user to input a valid username that meets the restrictions specified in the Joi schema.
 
 Joi allows for constraints to be placed on JavaScript Object properties. Lets take a look at a simple example:
 ```
